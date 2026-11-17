@@ -1,0 +1,12 @@
+:root {
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+
+  --header-bg: #222;
+  --text-color: #fff;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
