@@ -1,6 +1,10 @@
 .header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: var(--header-bg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--header-bg);
+}
+
+.header h1 {
+  margin: 0;
 }
