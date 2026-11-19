@@ -1,28 +1,19 @@
+import Markdown from "react-markdown";
+
 import Header from "./components/Header";
 
+const posts = import.meta.glob("./content/*.md", {
+  query: "?raw",
+  import: "default",
+  eager: true,
+});
+
 function App() {
+  const text = posts["./content/test.md"];
+
   return (
     <>
-      <Header />
-      <h1>aaaa</h1>
-      <h1>aaaa</h1>
-      <h1>aaaa</h1>
-      <h1>aaaa</h1>
-      <h1>aaaa</h1>
-      <h1>aaaa</h1>
-      <h1>aaaa</h1>
-      <h1>aaaa</h1>
-      <h1>aaaa</h1>
-      <h1>aaaa</h1>
-      <h1>aaaa</h1>
-      <h1>aaaa</h1>
-      <h1>aaaa</h1>
-      <h1>aaaa</h1>
-      <h1>aaaa</h1>
-      <h1>aaaa</h1>
-      <h1>aaaa</h1>
-      <h1>aaaa</h1>
-      <h1>aaaa</h1>
+      <Markdown>{text}</Markdown>
     </>
   );
 }
