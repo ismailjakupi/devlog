@@ -1,7 +1,13 @@
-import Markdown from "react-markdown";
+import { Routes, Route } from "react-router-dom";
 
+// importing components
 import Header from "./components/Header";
 
+// importing pages
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+
+//! THIS LOADS ALL POSTS!
 const posts = import.meta.glob("./content/*.md", {
   query: "?raw",
   import: "default",
@@ -9,11 +15,13 @@ const posts = import.meta.glob("./content/*.md", {
 });
 
 function App() {
-  const text = posts["./content/test.md"];
-
   return (
     <>
-      <Markdown>{text}</Markdown>
+      <Header></Header>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+      </Routes>
     </>
   );
 }
