@@ -7,12 +7,12 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 
-//! THIS LOADS ALL POSTS!
+/*//! THIS LOADS ALL POSTS!
 const posts = import.meta.glob("./content/*.md", {
   query: "?raw",
   import: "default",
   eager: true,
-});
+});*/
 
 function App() {
   return (

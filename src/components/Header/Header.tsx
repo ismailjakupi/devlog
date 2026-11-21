@@ -9,7 +9,7 @@ export default function Header() {
         <NavLink to="/projects">Projects</NavLink>
         <NavLink to="/posts">Posts</NavLink>
         <NavLink to="/notes">Notes</NavLink>
-        <button>About Me ↗</button>
+        <a href="https://codeberg.org/ismailjakupi">About Me ↗</a>
       </nav>
     </header>
   );
